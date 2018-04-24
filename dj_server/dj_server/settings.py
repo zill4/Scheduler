@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 
+SECRET_KEY = '06mjf#1p=ngvzr5%*yw*b%--21d$nkq$%++aqoc2&(&^)bkfey'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'schedule_app.apps.ScheduleAppConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -73,13 +74,19 @@ WSGI_APPLICATION = 'dj_server.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
-DDATABASES = {
-       'default': {
-           'ENGINE': 'djongo',
-           'NAME': 'db_schedule',
-       }
-   }
-
+DATABASES = {
+        'default': {
+            'ENGINE': 'djongo',
+            'ENFORCE_SCHEMA': False,
+            'NAME': 'db_schedule',
+            'HOST': 'mongodb://127.0.0.1',
+            'PORT': 27017,
+            'USER': 'django',
+            'PASSWORD': 'zill4zill4',
+            'AUTH_SOURCE': 'db_schedule',
+            'AUTH_MECHANISM': 'SCRAM-SHA-1',
+        }
+    }
 
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
