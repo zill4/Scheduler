@@ -1,13 +1,17 @@
 from django.http import HttpResponse
 from django.shortcuts import render
-from .models import  Author, Entry
+from .models import  Person
 # Create your views here.
 
 def index(request):
-    return HttpResponse("Hello, world. You're at the polls index.")
+    #return HttpResponse("<li><a href="{% url 'index' %}">Home</a></li>")
        # Render the HTML template index.html with the data in the context variable
+    
+    num_persons = Person.objects.count() 
+
     return render(
         request,
         'index.html',
-        context={},
+        context={'num_persons':num_persons},
     )
+
