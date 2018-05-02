@@ -31,14 +31,19 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'schedule_app.apps.ScheduleAppConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-]
+    'rest_framework',
+    'users',
+    'scheduler',
+    'corsheaders',
+]   
+
+AUTH_USER_MODEL = 'users.User'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -48,7 +53,19 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',  
+    'django.middleware.common.CommonMiddleware',
 ]
+
+CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOW_CREDENTIALS = True
+CORS_ORIGIN_WHITELIST = (
+    'localhost:8000',
+)
+CORS_ORIGIN_REGEX_WHITELIST = (
+    'localhost:8000',
+)
+
 
 ROOT_URLCONF = 'dj_server.urls'
 
@@ -78,12 +95,12 @@ DATABASES = {
         'default': {
             'ENGINE': 'djongo',
             'ENFORCE_SCHEMA': False,
-            'NAME': 'db_schedule',
+            'NAME': 'schedulerdb',
             'HOST': 'mongodb://127.0.0.1',
             'PORT': 27017,
-            'USER': 'django',
-            'PASSWORD': 'zill4zill4',
-            'AUTH_SOURCE': 'db_schedule',
+            'USER': 'admin',
+            'PASSWORD': 'losgatos95030',
+            'AUTH_SOURCE': 'schedulerdb',
             'AUTH_MECHANISM': 'SCRAM-SHA-1',
         }
     }
