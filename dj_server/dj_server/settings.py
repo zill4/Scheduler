@@ -95,12 +95,12 @@ DATABASES = {
         'default': {
             'ENGINE': 'djongo',
             'ENFORCE_SCHEMA': False,
-            'NAME': 'schedulerdb',
+            'NAME': 'django',
             'HOST': 'mongodb://127.0.0.1',
             'PORT': 27017,
-            'USER': 'admin',
-            'PASSWORD': 'losgatos95030',
-            'AUTH_SOURCE': 'schedulerdb',
+            'USER': 'djangoServer',
+            'PASSWORD': 'zill4zill4',
+            'AUTH_SOURCE': 'django',
             'AUTH_MECHANISM': 'SCRAM-SHA-1',
         }
     }

@@ -1,3 +1,4 @@
 {
-    "python.pythonPath": "${workspaceFolder}/schedule/bin/python"
+    "python.pythonPath": "${workspaceFolder}/schedule/bin/python",
+    "git.ignoreLimitWarning": true
 }

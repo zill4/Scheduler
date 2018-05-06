@@ -1,0 +1,16 @@
+<div>
+
+    <ul>
+      <li *ngFor="let message of session.messages">{{message.text}}</li>
+    </ul>
+    
+    <app-home
+      *ngFor="let message of session.messages"
+      [message]="message.text"
+      (update)="onUpdate(message.id, $event.text)"
+      >
+      
+    </app-home>
+  
+  
+  </div>
