@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files
+
+    deeppurple-amber.css
+    indigo-pink.css
+    pink-bluegrey.css
+    purple-green.css
+
+*/
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-graduation-cap {font-size:200px}
+.fa-child {font-size:250px}
