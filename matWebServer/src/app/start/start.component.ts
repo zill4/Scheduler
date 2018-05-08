@@ -13,7 +13,7 @@ export class StartComponent implements OnInit {
 
   dialogResult: string;
   constructor(public dialog: MatDialog){}
-  
+ 
   ngOnInit(){
   }
   

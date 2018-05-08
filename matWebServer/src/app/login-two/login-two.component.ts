@@ -4,14 +4,14 @@ import { MAT_DIALOG_DATA } from '@angular/material';
 import { User } from '../objects/user';
 
 @Component({
-  selector: 'app-login-dialog',
-  templateUrl: './login-dialog.component.html',
-  styleUrls: ['./login-dialog.component.scss']
+  selector: 'app-login-two',
+  templateUrl: './login-two.component.html',
+  styleUrls: ['./login-two.component.scss']
 })
-export class LoginDialogComponent implements OnInit {
+export class LoginTwoComponent implements OnInit {
 
   user = new User();
-  constructor(public thisDialogRef: MatDialogRef<LoginDialogComponent>, @Inject(MAT_DIALOG_DATA) public data: string) { }
+  constructor(public thisDialogRef: MatDialogRef<LoginTwoComponent>, @Inject(MAT_DIALOG_DATA) public data: string) { }
 
   ngOnInit() {
   }
@@ -25,6 +25,4 @@ export class LoginDialogComponent implements OnInit {
     this.thisDialogRef.close('cancel');
   }
   
-  
-
 }

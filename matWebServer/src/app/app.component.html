@@ -6,10 +6,15 @@
 
     <mat-toolbar color="primary"> 
         <mat-toolbar-row>
+            
       <button mat-button (click)="sidenav.toggle()">
           <mat-icon>menu</mat-icon>
+          
       </button>
-      <span>Athena</span>
+      <button mat-button>
+            <mat-icon>home</mat-icon>
+        </button>
+
 
 
 
@@ -17,12 +22,16 @@
     
        <button mat-button>About</button>
        <button mat-button>Planner</button>
-       <button mat-button>Login</button>
+       <button mat-button (click)="openDialog()" >Login</button>
     </mat-toolbar-row>
     </mat-toolbar>
  
 </mat-sidenav-container>
 
-
+<button mat-button (click)="fetchUsers()">Fetch Users</button>
+<hr>
+<ul>
+    <li *ngFor="let usr of users$ | async">{{ usr.username }} </li>
+</ul>
 <router-outlet></router-outlet>
 

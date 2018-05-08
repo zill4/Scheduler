@@ -1,0 +1,46 @@
+<div >
+    <mat-dialog-content>
+        <form class="formwidth"  #impForm="ngForm">
+            <h3>Sign up</h3>
+                <table class="fullwidth">
+                  <mat-form-field class="fullwidth" floatPlaceholder="never" >
+                    <input #usernameInput="ngModel" maxlength="16" minlength="4" required type="text" matInput placeholder="Username" id="username" [(ngModel)] ="user.username" name="username">
+                    <mat-hint align="start">Must be between 4 and 16 characters.</mat-hint>
+                    <mat-hint align="end">{{user.username.length}}/16</mat-hint>
+                    <mat-error *ngIf="usernameInput.errors?.minlength">
+                        4 characters required.
+                    </mat-error>
+                    <mat-error *ngIf="usernameInput.errors?.required">
+                       This field is required.
+                    </mat-error>
+                  </mat-form-field>
+                </table>
+               
+                <table class="fullwidth">
+                    <mat-form-field class="fullwidth" floatPlaceholder="never" >
+                        <input #passwordInput="ngModel" minlength="6" required matInput type="password" placeholder="Password" id="password" [(ngModel)]="user.password" name="password">
+                        <mat-hint align="start">6 Characters minimum.</mat-hint>
+                        <mat-error *ngIf="passwordInput.errors?.required">
+                            This field is required.
+                          </mat-error>
+                          <mat-error *ngIf="passwordInput.errors?.minlength">
+                             6 characters required.
+                            </mat-error>
+                      </mat-form-field>
+                    </table>
+          </form>
+        <!--
+  
+          <br>
+        <strong>{{data}}</strong>
+  
+        -->
+        
+    </mat-dialog-content>
+    <hr>
+    <mat-dialog-actions>
+      <button mat-raised-button (click)="onCloseConfirm()">LOGIN</button>
+      <button mat-raised-button (click)="onCloseCancel()">CANCEL</button>
+    </mat-dialog-actions>
+  </div>
+  
