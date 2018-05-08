@@ -16,6 +16,8 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
             username=validated_data.get('username', None)
         )
         user.set_password(validated_data.get('password', None))
+        print((validated_data.get('password')));
+        print((validated_data.get('username')));
         user.save()
         return user
  
