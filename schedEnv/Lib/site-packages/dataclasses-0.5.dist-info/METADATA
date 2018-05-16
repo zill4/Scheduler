@@ -1,0 +1,18 @@
+Metadata-Version: 2.0
+Name: dataclasses
+Version: 0.5
+Summary: An implementation of PEP 557: Data Classes
+Home-page: https://github.com/ericvsmith/dataclasses
+Author: Eric V. Smith
+Author-email: eric@python.org
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+
+UNKNOWN
+
+

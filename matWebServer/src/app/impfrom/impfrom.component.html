@@ -1,0 +1,27 @@
+<form class="formwidth" (ngSubmit)="onSubmit()" #impForm="ngForm">
+  <h3>Sign up</h3>
+    
+        <mat-form-field class="fullwidth" floatPlaceholder="always" >
+          <input maxlength="16" minlength="4" required type="text" matInput placeholder="Username" id="username" [(ngModel)] ="user.username" name="username">
+          <mat-hint align="start">Must be between 4 and 16 characters.</mat-hint>
+          <mat-hint align="end">{{user.username.length}}/16</mat-hint>
+        </mat-form-field>
+ 
+
+    <mat-form-field class="fullwidth">
+      <textarea required matInput placeholder="Email" id="email" [(ngModel)]="user.email" name="email"></textarea>
+    </mat-form-field>
+   
+    
+  
+
+          <mat-form-field class="fullwidth">
+            <input minlength="6" required matInput type="password" placeholder="Password" id="password" [(ngModel)]="user.password" name="password">
+            <mat-hint align="start">6 Characters minimum.</mat-hint>
+          </mat-form-field>
+    
+  
+    <p>
+      <button type="submit" mat-raised-button>Submit</button>
+  </p>
+</form>
