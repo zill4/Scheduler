@@ -1,22 +1,15 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<mat-sidenav #sidenav></mat-sidenav>
-<mat-sidenav-container>
-
-
-
-    <mat-toolbar color="primary"> 
+<!--
+<button mat-button (click)="fetchUsers()">Fetch Users</button>
+<hr>
+<ul>
+    <li *ngFor="let usr of users$ | async">{{ usr.username }} </li>
+</ul>
+-->
+<mat-toolbar color="primary"> 
         <mat-toolbar-row>
-            
-      <button mat-button (click)="sidenav.toggle()">
-          <mat-icon>menu</mat-icon>
-          
-      </button>
-      <button mat-button>
+        <button mat-button>
             <mat-icon>home</mat-icon>
         </button>
-
-
-
 
       <span class="example-spacer"></span>
     
@@ -25,17 +18,5 @@
        <button mat-button (click)="openDialog()" >Login</button>
     </mat-toolbar-row>
     </mat-toolbar>
- 
-</mat-sidenav-container>
-<!--
-
-
-<button mat-button (click)="fetchUsers()">Fetch Users</button>
-<hr>
-<ul>
-    <li *ngFor="let usr of users$ | async">{{ usr.username }} </li>
-</ul>
--->
-
 <router-outlet></router-outlet>
 

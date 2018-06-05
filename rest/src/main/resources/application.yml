@@ -1,0 +1,35 @@
+# Spring boot settings
+spring:
+  application:
+    name: rest
+
+  pid:
+    file: build/rest.pid
+
+  data:
+    mongodb:
+      uri: mongodb://Crisp-admin:P1eP1eP1e!@athena1-2fwwc.mongodb.net/scheduleDb
+
+
+  social:
+    facebook:
+      app-id: 2545721442319767
+      app-secret: 8a8fec2058da3a6a67a5af7f771e782d
+
+server:
+  port: 8181
+  ssl:
+    key-store-type: JKS
+    key-store: classpath:athena-store.jks
+    key-store-password: ath3n4ath3n4
+    key-alias: athena
+    key-store-provider: SUN
+security:
+  require-ssl: true
+  user:
+    name: athena
+    password: ath3n4ath3n4
+
+
+#-------------------------------------------------------------------------------------------
+
