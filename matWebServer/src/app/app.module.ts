@@ -4,37 +4,31 @@ import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
 import { AppRoutingModule } from './app-routing.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AppBootstrapModule } from './app-bootstrap.module';
+
+import 'rxjs';
 import 'hammerjs';
 //COMPONENTS
 import { AppComponent } from './app.component';
-import { StartComponent } from './start/start.component';
-import { HomeComponent } from './home/home.component';
-import { PlannerComponent } from './planner/planner.component';
-import { AboutComponent } from './about/about.component';
-import { LoginDialogComponent } from './login-dialog/login-dialog.component';
-import { ToolTipComponent } from './tool-tip/tool-tip.component';
-import { CliffBarComponent } from './cliff-bar/cliff-bar.component';
-import { ImpfromComponent } from './impfrom/impfrom.component';
+import { routingComponents } from './app-routing.module'
 import { LoginTwoComponent } from './login-two/login-two.component';
+import { LoginDialogComponent } from './login-dialog/login-dialog.component';
+//SERVICES
 import { UsersService } from './users.service';
+import { ClassesComponent } from './classes/classes.component';
+import { ScheduleComponent } from './schedule/schedule.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    StartComponent,
-    HomeComponent,
-    PlannerComponent,
-    AboutComponent,
-    LoginDialogComponent,
-    ToolTipComponent,
-    CliffBarComponent,
-    ImpfromComponent,
-    LoginTwoComponent
+    routingComponents,
+    ClassesComponent,
+    ScheduleComponent
   ],
   imports: [
+    ReactiveFormsModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,

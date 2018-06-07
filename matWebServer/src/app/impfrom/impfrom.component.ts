@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 //import { MatInput } from '@angular/material';
-import { User } from '../objects/user';
+import { User } from '../../objects/user';
 
 @Component({
   selector: 'app-impfrom',

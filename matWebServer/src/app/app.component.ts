@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { LoginTwoComponent } from './login-two/login-two.component';
 import { UsersService } from './users.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +14,7 @@ export class AppComponent {
   users$;
 
   dialogResult: string;
-  constructor(public dialog: MatDialog, private usersService: UsersService){}
+  constructor(public dialog: MatDialog, private usersService: UsersService, private router: Router){}
  
   ngOnInit(){
   }
@@ -30,6 +31,9 @@ export class AppComponent {
     })
   }
 
+  openProfile(){
+    this.router.navigate(['/profile']);
+  }
   fetchUsers(){
     this.users$ = this.usersService.fetchUsers();
   }
